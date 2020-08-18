@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cowsay</title>
+    </head>
+    <body>
+    <pre><a href="/">Home</a> <a href="/history/">History</a></pre>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <pre>{{ phrases.cow }}</pre>
+        <br>
+        <input type="submit" value="Submit!">
+    </form>
+</body>
+</html>
